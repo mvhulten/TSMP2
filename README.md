@@ -35,6 +35,8 @@ path of each model to `<model-name>_SRC` variable.
 ```bash
 # NOTE: Clone only the component models that you need!
 
+cd ${BUILD_DIR}
+
 # eCLM
 git clone https://github.com/HPSCTerrSys/eCLM.git
 eCLM_SRC=`realpath eCLM`
@@ -54,6 +56,8 @@ CLM35_SRC=`realpath CLM3.5`
 # COSMO5.01
 git clone -b tsmp-oasis https://icg4geo.icg.kfa-juelich.de/ModelSystems/tsmp_src/cosmo5.01_fresh.git
 COSMO_SRC=`realpath cosmo5.01_fresh`
+
+cd -
 ```
 
 5. Supply the build and install directories (step 2) and the paths to component models (step 3) to CMake. 
